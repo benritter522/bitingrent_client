@@ -49,7 +49,7 @@ const Songs = () => {
                         >
                             <p className="indexSongTitle">{song.title}</p>
                             <p  className="indexSongFirstLine"
-                                onClick={this.toggle}
+                                // onClick={this.toggle}
                             >
                                 {song.firstLine}
                             </p>
