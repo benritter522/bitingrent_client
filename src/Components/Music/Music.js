@@ -1,7 +1,7 @@
 // import React from 'react';
-import { Route, Link, Switch } from 'react-router-dom';
+import { Link } from 'react-router-dom';
 
-import Songs from '../Songs/Songs';
+// import Songs from '../Songs/Songs';
 
 const Music = () => {
     return(
