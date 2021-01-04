@@ -7,7 +7,7 @@ const SinglePlant = (props) => {
     // Read
     const fetchSinglePlant = async () => {
         try {
-            const response = await fetch(`http://localhost:3000/plants/${props.match.params.id}`);
+            const response = await fetch(`http://bitingrent-backend.herokuapp.com/plants/${props.match.params.id}`);
             const data = await response.json();
             setSinglePlant(data);
         } catch(error) {

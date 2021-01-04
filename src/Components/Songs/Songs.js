@@ -7,7 +7,7 @@ const Songs = () => {
     // Read
     const fetchSongs = async () => {
         try {
-        const response = await fetch('http://localhost:3000/songs');
+        const response = await fetch('http://bitingrent-backend.herokuapp.com/songs');
         const data = await response.json();
         setSongs(data);
         } catch(error) {
@@ -18,7 +18,7 @@ const Songs = () => {
     // Delete
     const deleteSong = async (id) => {
         try {
-        const response = await fetch(`http://localhost:3000/songs/${id}`, {
+        const response = await fetch(`http://bitingrent-backend.herokuapp.com/${id}`, {
             method: 'DELETE',
             headers: {
             'Content-type': 'application/json'

@@ -10,7 +10,7 @@ const Plants = () => {
   // Read
     const fetchPlants = async () => {
         try {
-            const response = await fetch('http://localhost:3000/plants');
+            const response = await fetch('http://bitingrent-backend.herokuapp.com/plants');
             // const response = await fetch('/plants');
             const data = await response.json();
             setPlants(data);
@@ -22,7 +22,7 @@ const Plants = () => {
     // Delete
     const deletePlant = async (id) => {
         try {
-        const response = await fetch(`http://localhost:3000/plants/${id}`, {
+        const response = await fetch(`http://bitingrent-backend.herokuapp.com/plants/${id}`, {
             method: 'DELETE',
             headers: {
             'Content-type': 'application/json'
