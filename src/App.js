@@ -33,21 +33,19 @@ function App() {
           <Link className="App-link" to="/plants">Plants</Link>
         </nav>
       </header>
-      <body>
-        <Switch> 
-        {/* SWITCH WILL RETURN THE FIRST THING IT FINDS THAT FITS. /PLANTS/:ID MUST BE BEFORE /PLANTS*/}
-          <Route exact path ="/" component={Home} />
-          <Route path="/about" component={About} />
-          <Route path="/songs" component={Songs} />
-          <Route path="/music" component={Music} />
-          <Route exact path="/plants/:id" render={routerProps =>
-            <SinglePlant {...routerProps} />
-          } />
-          <Route path="/plants" component={Plants} />
-        </Switch>
-        <br/>
-      </body>
-        <footer className="bitingRentFooter"> created by BitingRent</footer>
+      <Switch> 
+      {/* SWITCH WILL RETURN THE FIRST THING IT FINDS THAT FITS. /PLANTS/:ID MUST BE BEFORE /PLANTS*/}
+        <Route exact path ="/" component={Home} />
+        <Route path="/about" component={About} />
+        <Route path="/songs" component={Songs} />
+        <Route path="/music" component={Music} />
+        <Route exact path="/plants/:id" render={routerProps =>
+          <SinglePlant {...routerProps} />
+        } />
+        <Route path="/plants" component={Plants} />
+      </Switch>
+      <br/>
+      <footer className="bitingRentFooter"> created by BitingRent</footer>
     </div>
   );
 }
