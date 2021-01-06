@@ -23,16 +23,17 @@ function App() {
         <Link className="bitingRentHeaderLink" to="/">
           <h1 className="bitingRentHeader">BitingRent</h1>
         </Link>
-        <img src="https://i.imgur.com/4CbaLZT.png" />
+        <img src="https://i.imgur.com/4CbaLZT.png" alt="My Face"/>
 
         <nav>
           <Link className="App-link" to="/">Home</Link>
           <Link className="App-link" to="/about">About</Link>
           <Link className="App-link" to="/music">Music</Link>
-          {/* <Link to="/songs">Songs</Link> */}
+          <Link className="App-link" to="/songs">Songs</Link>
           <Link className="App-link" to="/plants">Plants</Link>
         </nav>
       </header>
+      <body>
         <Switch> 
         {/* SWITCH WILL RETURN THE FIRST THING IT FINDS THAT FITS. /PLANTS/:ID MUST BE BEFORE /PLANTS*/}
           <Route exact path ="/" component={Home} />
@@ -44,8 +45,9 @@ function App() {
           } />
           <Route path="/plants" component={Plants} />
         </Switch>
-        <p className="bitingRentFooter"> created by BitingRent</p>
         <br/>
+      </body>
+        <footer className="bitingRentFooter"> created by BitingRent</footer>
     </div>
   );
 }

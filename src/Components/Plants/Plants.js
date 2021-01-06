@@ -2,6 +2,8 @@
 import { useState, useEffect } from 'react';
 import { Link } from 'react-router-dom';
 
+// const SERVERURL = process.env.SERVER_URL; // || "http://localhost:3000";
+
 // import SinglePlant from '../SinglePlant/SinglePlant';
 
 const Plants = () => {
@@ -10,7 +12,9 @@ const Plants = () => {
   // Read
     const fetchPlants = async () => {
         try {
+            // const response = await fetch(`${SERVERURL}/plants`);
             const response = await fetch('http://bitingrent-backend.herokuapp.com/plants');
+            // const response = await fetch('http://localhost:3000/plants');
             // const response = await fetch('/plants');
             const data = await response.json();
             setPlants(data);
@@ -19,22 +23,23 @@ const Plants = () => {
         }
     }
 
-    // Delete
-    const deletePlant = async (id) => {
-        try {
-        const response = await fetch(`http://bitingrent-backend.herokuapp.com/plants/${id}`, {
-            method: 'DELETE',
-            headers: {
-            'Content-type': 'application/json'
-            }
-        });
-        const data = await response.json();
-        const filteredPlants = plants.filter(plant => plant._id !== data._id);
-        setPlants(filteredPlants);
-        } catch(error) {
-        console.error(error);
-        }
-    }
+    // // Delete
+    // const deletePlant = async (id) => {
+    //     try {
+    //         // const response = await fetch(`${SERVERURL}/plants/${id}`, {
+    //         const response = await fetch(`http://bitingrent-backend.herokuapp.com/plants/${id}`, {
+    //         method: 'DELETE',
+    //         headers: {
+    //         'Content-type': 'application/json'
+    //         }
+    //     });
+    //     const data = await response.json();
+    //     const filteredPlants = plants.filter(plant => plant._id !== data._id);
+    //     setPlants(filteredPlants);
+    //     } catch(error) {
+    //     console.error(error);
+    //     }
+    // }
 
     useEffect(() => {
         fetchPlants();
@@ -50,7 +55,7 @@ const Plants = () => {
             <h1>Plants</h1>
             <div className="indexPlants">
                 {
-                    plants.map(plant => {
+                    plants.map((plant, index) => {
                     return(
                         <div className="indexSinglePlant" key={plant._id}>
                             <Link   
@@ -60,7 +65,7 @@ const Plants = () => {
                                     to={`/plants/${plant._id}`}>
                                 {/* <p className="indexPlantNickname">{plant.nickname}, the {plant.color} </p> */}
                                 <p className="indexPlantName">{plant.name}</p>
-                                <img className="indexPlantImg" src={plant.img}/>
+                                <img className="indexPlantImg" src={plant.img} alt={`Plant ${index}`}/>
                             </Link>
 
                             {/* <button onClick={

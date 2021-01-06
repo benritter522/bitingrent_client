@@ -52,14 +52,10 @@ nav {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-around;
-  /* margin: 0; */
-  /* padding: 5rem; */
 }
 .indexSinglePlant {
   background-color: black;
-  /* border: 1px solid white; */
   width: 20rem;
-  /* height: 20rem; */
   margin: .5rem;
   padding: .5rem;
   text-align: center;
@@ -67,7 +63,10 @@ nav {
 .indexPlantImg {
   width: 80%;
 }
-
+.showPlantImg {
+  width: 40%;
+  margin: 0;
+}
 /* .songs-header {
   text-align: left;
 
@@ -78,26 +77,43 @@ nav {
 .indexSongs {
   background-color: black;
   text-align: left;
-  /* border: 1px solid white; */
   margin: 0;
   padding: 0 3rem;
 }
 .indexSingleSong {
-  /* border: 1px solid white; */
-  /* margin: 2rem; */
   padding: 1rem 0;
 }
 .indexSongTitle {
+  margin-top: 2rem;
+  margin-bottom: 1rem;
+}
+.indexSongTitle:hover {
   text-decoration: underline;
 }
-/* .indexSongFirstLine {
-  border: 1px solid white;
-} */
-
-.showPlantImg {
-  width: 40%;
+.indexSongFirstLine {
   margin: 0;
 }
+.indexSongLyrics {
+  opacity: 0;
+  height: 0;
+  padding: 0;
+  margin: 0;
+  font-size: 0;
+  /* transition: height .3s; */
+} 
+/* .indexShowLyrics {
+  border: 1px solid white;
+} */
+.indexShowLyrics + .indexSongLyrics {
+  opacity: 1;
+  height: 100%;
+  font-size: 1rem;
+}
+.indexShowLyrics + .indexSongLyrics + .indexSongFirstLine {
+  opacity: 0;
+  height: 0;
+}
+
 
 .bitingRentFooter {
   background-color: black;
@@ -122,11 +138,11 @@ nav {
   color: white;
   text-decoration: none;
 }
-
-
 .App-link:hover {
   text-decoration: underline;  
 }
+
+
 
 
 
