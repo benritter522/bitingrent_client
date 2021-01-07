@@ -20,12 +20,13 @@ const SinglePlant = (props) => {
 
     useEffect(() => {
         fetchSinglePlant();
-        console.log('use effect running');
+        // console.log('use effect running');
     }, []);
+    // });
 
     
 
-    console.log(props);
+    // console.log(props);
     return (
         <div>
             {/* <h1>hello plant</h1> */}

@@ -9,12 +9,12 @@ const Songs = () => {
     // Read
     const fetchSongs = async () => {
         try {
-        const response = await fetch('http://bitingrent-backend.herokuapp.com/songs');
-        // const response = await fetch(`${SERVERURL}/songs`);
-        const data = await response.json();
-        setSongs(data);
+            const response = await fetch('http://bitingrent-backend.herokuapp.com/songs');
+            // const response = await fetch(`${SERVERURL}/songs`);
+            const data = await response.json();
+            setSongs(data);
         } catch(error) {
-        console.error(error); // {msg: error.message} ??
+            console.error(error); // {msg: error.message} ??
         }
     }
 
@@ -35,12 +35,12 @@ const Songs = () => {
     //     }
     // }
 
-    const handleClick= (event) => {
+    const handleClick = (event) => {
         // only want to toggle this class for one intended piece
         if(event.target.classList.contains('indexSongTitle')) {
             event.target.classList.toggle('indexShowLyrics');
         }
-        console.log(event.target);
+        // console.log(event.target);
     }
 
     useEffect(() => {

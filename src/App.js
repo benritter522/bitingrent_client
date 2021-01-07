@@ -28,7 +28,7 @@ function App() {
         <nav>
           <Link className="App-link" to="/">Home</Link>
           <Link className="App-link" to="/about">About</Link>
-          <Link className="App-link" to="/music">Music</Link>
+          {/* <Link className="App-link" to="/music">Music</Link> */}
           <Link className="App-link" to="/songs">Songs</Link>
           <Link className="App-link" to="/plants">Plants</Link>
         </nav>
