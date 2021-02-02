@@ -28,12 +28,19 @@ const Home = () => {
                                 className="indexSingleProject"
                                 key={index}
                             >
-                                <h2 className="indexProjectTitle">{project.title}</h2>
+                                <h3 className="indexProjectTitle">{project.title}</h3>
                                 <img src={project.image} alt={`Project ${project.title}`} className="indexProjectImg"/>
                                 {
                                     project.links.map((projectLink, index) => {
                                         return(
-                                            <a href="projectLink">Check it out!</a>
+                                            <div>
+                                                <a 
+                                                    className="App-link" 
+                                                    href={projectLink}
+                                                >
+                                                    Check it out!
+                                                </a><br />
+                                            </div>
                                         )
                                     })
                                 }
