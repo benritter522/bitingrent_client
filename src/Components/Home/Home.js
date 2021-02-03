@@ -38,7 +38,7 @@ const Home = () => {
                                                     className="App-link" 
                                                     href={projectLink}
                                                 >
-                                                    Check it out!
+                                                    {projectLink}
                                                 </a><br />
                                             </div>
                                         )
