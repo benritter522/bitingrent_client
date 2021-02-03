@@ -23,7 +23,8 @@ function App() {
         <Link className="bitingRentHeaderLink" to="/">
           <h1 className="bitingRentHeader">BitingRent</h1>
         </Link>
-        <img src="https://i.imgur.com/4CbaLZT.png" alt="My Face"/>
+        <img src="https://res.cloudinary.com/bitingrent/image/upload/v1612332074/Projects/GithubPhoto_vivawp.jpg" alt="My Face"/>
+        {/* <img src="https://i.imgur.com/4CbaLZT.png" alt="My Face"/> */}
 
         <nav>
           <Link className="App-link" to="/">Home</Link>
