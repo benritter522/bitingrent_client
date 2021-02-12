@@ -29,21 +29,31 @@ const Home = () => {
                                 key={index}
                             >
                                 <h3 className="indexProjectTitle">{project.title}</h3>
-                                <img src={project.image} alt={`Project ${project.title}`} className="indexProjectImg"/>
-                                {
-                                    project.links.map((projectLink, index) => {
-                                        return(
-                                            <div>
-                                                <a 
-                                                    className="App-link" 
-                                                    href={projectLink}
-                                                >
-                                                    {projectLink}
-                                                </a><br />
-                                            </div>
-                                        )
-                                    })
-                                }
+                                <div className="indexProjectContents">
+                                    <img className="indexProjectImg" src={project.image} alt={`Project ${project.title}`} />
+                                    <div className="indexProjectText">
+                                        <div className="indexProjectDescription">
+                                            Description
+                                        </div>
+                                        <div className="indexProjectLinks">
+                                        {
+                                            project.links.map((projectLink, indexLink) => {
+                                                return(
+                                                    <div>
+                                                        <a 
+                                                            className="App-link" 
+                                                            href={projectLink}
+                                                            key={indexLink}
+                                                        >
+                                                            {projectLink}
+                                                        </a><br />
+                                                    </div>
+                                                )
+                                            })
+                                        }
+                                        </div>
+                                    </div>
+                                </div>
                             </div>
                         )
                     })
