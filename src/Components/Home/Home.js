@@ -20,6 +20,9 @@ const Home = () => {
     return(
         <div>
             <h2>Welcome! Please, check out my projects below, or go ahead and check out my music and plants. </h2>
+            { !projects ? 
+            <h3>Loading Projects...</h3>
+            : 
             <div className="indexProjects">
                 {
                     projects.map((project, index) => {
@@ -34,7 +37,7 @@ const Home = () => {
                                     <div className="indexProjectText">
                                         <div className="indexProjectDescription">
                                             <h3 className="indexProjectDescriptionHeader">Description</h3>
-                                            Description coming soon.
+                                            <p className="indexProjectDescriptionText">Description coming soon.</p>
                                         </div>
                                         <div className="indexProjectLinks">
                                         <h3 className="indexProjectLinksHeader">Links</h3>
@@ -61,6 +64,7 @@ const Home = () => {
                     })
                 }
             </div>
+            }
         </div>
     )
 }
