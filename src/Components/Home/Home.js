@@ -33,19 +33,21 @@ const Home = () => {
                                     <img className="indexProjectImg" src={project.image} alt={`Project ${project.title}`} />
                                     <div className="indexProjectText">
                                         <div className="indexProjectDescription">
-                                            Description
+                                            <h3 className="indexProjectDescriptionHeader">Description</h3>
+                                            Description coming soon.
                                         </div>
                                         <div className="indexProjectLinks">
+                                        <h3 className="indexProjectLinksHeader">Links</h3>
                                         {
                                             project.links.map((projectLink, indexLink) => {
                                                 return(
                                                     <div>
                                                         <a 
                                                             className="App-link" 
-                                                            href={projectLink}
+                                                            href={projectLink.url}
                                                             key={indexLink}
                                                         >
-                                                            {projectLink}
+                                                            {projectLink.label}
                                                         </a><br />
                                                     </div>
                                                 )
