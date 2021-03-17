@@ -21,7 +21,7 @@ function App() {
     <div className="App">
       <header className="App-header">
         <Link className="bitingRentHeaderLink" to="/">
-          <h1 className="bitingRentHeader">BitingRent</h1>
+          <h1 className="bitingRentHeader">Ben Ritter</h1>
         </Link>
         <img src="https://res.cloudinary.com/bitingrent/image/upload/v1612332074/Projects/GithubPhoto_vivawp.jpg" alt="My Face"/>
         {/* <img src="https://i.imgur.com/4CbaLZT.png" alt="My Face"/> */}

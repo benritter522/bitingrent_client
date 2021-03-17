@@ -29,7 +29,7 @@ const Home = () => {
                         return(
                             <div 
                                 className="indexSingleProject"
-                                key={index}
+                                key={"project" + index}
                             >
                                 <h3 className="indexProjectTitle">{project.title}</h3>
                                 <div className="indexProjectContents">
@@ -44,11 +44,12 @@ const Home = () => {
                                         {
                                             project.links.map((projectLink, indexLink) => {
                                                 return(
-                                                    <div>
+                                                    <div
+                                                    key={"link" + indexLink}
+                                                    >
                                                         <a 
                                                             className="App-link" 
                                                             href={projectLink.url}
-                                                            key={indexLink}
                                                         >
                                                             {projectLink.label}
                                                         </a><br />
